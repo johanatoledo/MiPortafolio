@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .btn-cyber {
+    @apply bg-transparent text-white rounded-full px-8 py-3 font-bold border-2 border-transparent transition-colors duration-300;
+  }
+  .btn-cyber:hover {
+    @apply text-primary;
+  }
+}
+@layer utilities {
+  .diagonal-gradient-pro {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 255, 255, 0.15) 20%,   /* Cian muy suave al inicio */
+      rgba(5, 5, 5, 1) 40%,         /* Negro sólido en el centro (mejor para el texto) */
+      rgba(255, 0, 60, 0.2) 100%    /* Rojo sutil al final */
+    );
+    background-color: #050505; /* Color de respaldo */
+  }
+}
+
+@layer base {
+  body {
+    background: #050505;
+    background-image:
+      radial-gradient(ellipse 40% 30% at 0% 0%, rgba(0,255,255,0.25) 0%, transparent 80%),
+      radial-gradient(ellipse 40% 30% at 100% 100%, rgba(255,0,60,0.18) 0%, transparent 80%);
+    @apply text-white antialiased;
+    min-height: 100vh;
+  }
+
+  /* Personalización del scrollbar para que combine con el Cian */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #00EAFF; /* Tu Cian */
+    border-radius: 10px;
+  }
+}
+
+@layer components {
+  /* Aquí puedes crear clases reutilizables para tus proyectos */
+  .btn-primary {
+    @apply px-6 py-2 border-2 border-primary text-primary hover:bg-primary hover:text-black transition-all duration-300;
+  }
+}

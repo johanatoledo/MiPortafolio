@@ -1,0 +1,36 @@
+#Dependencias
+node_modules/
+.pnp
+.pnp.js
+
+#Produccion
+dist/
+build/
+
+#logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+#Variables de entorno
+.env.development.local
+.env.development
+.env.local
+.env.production.local
+.env.production
+
+#Editor / VsCode
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+#Docker
+.dockerignore
+
+#Otros
+.DS_Store

@@ -1,0 +1,31 @@
+import React from 'react';
+
+const ProfileImage = ({ src }) => {
+  return (
+   <div className="relative flex items-center justify-center py-20 group">
+      
+      {/* Llave de apertura - Ajustada a text-[18rem] para gran tamaño */}
+      <span className="text-primary text-[12rem] md:text-[18rem] font-mono leading-none opacity-40 group-hover:opacity-100 group-hover:-translate-x-6 transition-all duration-700 select-none">
+        {'{'}
+      </span>
+
+      {/* Contenedor de la Foto (Mantiene su tamaño w-64 = 16rem) */}
+      <div className="relative mx-2 md:mx-8 w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+        <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-2xl blur-xl opacity-20 group-hover:opacity-60 transition duration-700"></div>
+        <img 
+          src={src} 
+          className="relative w-full h-full object-cover rounded-2xl grayscale-[50%] group-hover:grayscale-0 transition-all duration-700 border border-white/10" 
+          alt="ToledanaDev"
+        />
+      </div>
+
+      {/* Llave de cierre - Ajustada a text-[18rem] */}
+      <span className="text-accent text-[12rem] md:text-[18rem] font-mono leading-none opacity-40 group-hover:opacity-100 group-hover:translate-x-6 transition-all duration-700 select-none">
+        {'}'}
+      </span>
+
+    </div>
+  );
+};
+
+export default ProfileImage;
