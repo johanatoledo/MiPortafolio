@@ -12,26 +12,41 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import { DarkModeProvider } from './context/DarkModeContext';
 
-
 export default function App() {
-
   return (
     <DarkModeProvider>
       <BrowserRouter>
+     
         <div className="min-h-screen font-sans transition-colors duration-300 bg-white dark:diagonal-gradient-pro">
           <Navbar />
-          <Hero />
-          <AboutMe />
-          <FaQuestion />
-          <Contact />
+          
+          <section id="home">
+            <Hero />
+          </section>
+
+          <section id="about">
+            <AboutMe />
+          </section>
+
+          <section id="faq">
+            <FaQuestion />
+          </section>
+
+          <section id="contact">
+            <Contact />
+          </section>
+         
           <Routes>
+            <Route path="/" element={null} /> 
             <Route path='/Services' element={<Services />} />
             <Route path='/Contact' element={<Contact />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path="*" element={null} />
           </Routes>
+
           <Footer />
         </div>
       </BrowserRouter>
     </DarkModeProvider>
   )
 }
-

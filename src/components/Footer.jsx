@@ -1,15 +1,15 @@
 import React from 'react';
-import Skills from './Skills'; // Asegúrate de que la ruta sea correcta
+import Skills from './Skills'; 
 
 export default function Footer() {
   return (
     <footer className="py-12 px-8 bg-white dark:bg-[#0a0a0a] text-black dark:text-white mt-12 transition-colors duration-300 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         
-        {/* Redes Sociales - Izquierda */}
+        
         <div className="flex gap-6 order-2 md:order-1">
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/johana-toledo-87a939222" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="font-bold hover:text-primary transition-colors duration-300 uppercase text-sm tracking-widest"
@@ -17,7 +17,7 @@ export default function Footer() {
             LinkedIn
           </a>
           <a 
-            href="https://github.com" 
+            href="https://github.com/johanatoledo" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="font-bold hover:text-primary transition-colors duration-300 uppercase text-sm tracking-widest"

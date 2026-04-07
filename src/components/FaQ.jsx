@@ -14,8 +14,8 @@ const FaQ = () => {
       answer: "Absolutamente. Utilizo un enfoque 'Mobile-First' con Tailwind CSS, garantizando que tu web se vea perfecta en smartphones, tablets y desktops."
     },
     {
-      question: "¿Qué tecnologías utilizas?",
-      answer: "Me especializo en el Stack MERN (MySQL, Express, React, Node.js). También utilizo Docker para despliegues seguros y NGINX para alta disponibilidad."
+      question: "¿Qué tanto espacio consume en mi conmputadora?",
+      answer: "No ocupa espacio ni consume recursos de su computadora. Todo vive en un servidor seguro de alta velocidad  que yo gestiono. "
     },
     {
       question: "¿Ofreces servicio de hosting y dominio?",
