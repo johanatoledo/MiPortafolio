@@ -1,42 +1,38 @@
 import React from 'react';
-import { Code2, Layout, Server, Database, Smartphone, Globe } from 'lucide-react';
+
+
 
 const Services = () => {
-  // Lista de servicios profesionales
+  
   const servicesList = [
     {
-      title: "Desarrollo Frontend",
+      title: "Portafolios profesionales",
       description: "Creación de interfaces modernas y ultra rápidas con React, utilizando arquitecturas de componentes escalables.",
-      icon: <Layout className="w-10 h-10 text-primary" />,
     },
     {
-      title: "Backend & APIs",
+      title: "Sistema para restaurantes",
       description: "Construcción de servidores robustos con Node.js y Express, diseñando APIs RESTful eficientes y seguras.",
-      icon: <Server className="w-10 h-10 text-primary" />,
+      
     },
     {
-      title: "Bases de Datos",
+      title: "Paginas para salones y/o barberias",
       description: "Diseño y optimización de bases de datos relacionales con MySQL, garantizando la integridad de los datos.",
-      icon: <Database className="w-10 h-10 text-primary" />,
+    
     },
     {
-      title: "Contenerización",
+      title: "Tiendas Online",
       description: "Despliegue y gestión de aplicaciones mediante Docker para asegurar entornos de producción idénticos.",
-      icon: <Code2 className="w-10 h-10 text-primary" />,
+      
     },
     {
-      title: "Responsive Design",
+      title: "Paginas para servicios de limpieza",
       description: "Adaptación de cualquier plataforma a dispositivos móviles y tablets garantizando la mejor experiencia de usuario.",
-      icon: <Smartphone className="w-10 h-10 text-primary" />,
+      
     },
-    {
-      title: "Despliegue en Linux",
-      description: "Configuración de servidores Ubuntu/Debian, NGINX y mantenimiento de infraestructura en la nube.",
-      icon: <Globe className="w-10 h-10 text-primary" />,
-    },
+    
   ];
 
-  // Función para navegar suavemente al componente de contacto
+  
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -61,12 +57,8 @@ const Services = () => {
             onClick={scrollToContact}
             className="diagonal-gradient-pro group cursor-pointer p-8 rounded-xl border border-gray-800 hover:border-primary transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden"
           >
-            {/* Efecto de brillo sutil al hacer hover */}
-            <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
             
-            <div className="mb-6 transform group-hover:scale-110 transition-transform duration-500">
-              {service.icon}
-            </div>
+            <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
 
             <h3 className="text-xl font-bold mb-3 text-white group-hover:text-primary transition-colors duration-300">
               {service.title}

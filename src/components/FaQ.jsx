@@ -7,27 +7,27 @@ const FaQ = () => {
   const faqs = [
     {
       question: "¿Cuánto tiempo toma desarrollar una web?",
-      answer: "Depende de la complejidad. Una Landing Page toma de 1 a 2 semanas, mientras que una App completa con Backend y DB puede tomar de 4 a 8 semanas."
+      answer: "Depende de la complejidad. Una Landing Page toma de 1 a 3 dias, mientras que una App completa con Backend y DB puede tomar de 3 a 4 semanas."
     },
     {
       question: "¿Mi página será compatible con dispositivos móviles?",
-      answer: "Absolutamente. Utilizo un enfoque 'Mobile-First' con Tailwind CSS, garantizando que tu web se vea perfecta en smartphones, tablets y desktops."
+      answer: "Absolutamente. Utilizo un enfoque 'Mobile-First' , garantizando que tu web se vea perfecta en smartphones, tablets y desktops."
     },
     {
       question: "¿Qué tanto espacio consume en mi conmputadora?",
-      answer: "No ocupa espacio ni consume recursos de su computadora. Todo vive en un servidor seguro de alta velocidad  que yo gestiono."
+      answer: "No ocupa espacio ni consume recursos de su computadora. Todo vive en un servidor seguro de alta velocidad  gestionado de manera independiente."
     },
      {
-      question: "¿",
-      answer: "No ocupa espacio ni consume recursos de su computadora. Todo vive en un servidor seguro de alta velocidad  que yo gestiono."
+      question: "¿Realizas mantenimiento después del lanzamiento?",
+      answer: "Claro que si, hacemos un continuo seguimiento a tu app asegurandonos de su correcto funcionamiento."
     },
     {
-      question: "¿Ofreces servicio de hosting y dominio?",
-      answer: "Te asesoro en la compra y me encargo de la configuración técnica en servidores Linux (Ubuntu 25.10). El costo de infraestructura corre por cuenta del cliente."
+      question: "¿Ofreces garantia?",
+      answer: "Todos nuestros servicios vienen con hasta tres meses de garantia."
     },
     {
-      question: "¿Puedo actualizar el contenido yo mismo?",
-      answer: "Sí. Puedo integrar un panel de administración personalizado para que gestiones tus proyectos y servicios sin tocar una sola línea de código."
+      question: "¿Mi pagina es personalizable?",
+      answer: "Sí. En toledadev el todas ideas son tomadas en cuenta"
     }
   ];
 

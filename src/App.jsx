@@ -21,8 +21,7 @@ export default function App() {
           <Navbar />
           <section id="home"> <Hero /> </section>
           <section id="about"><AboutMe /></section>
-          <section id="faq"><FaQuestion /></section>
-          <section id="contact"><Contact /></section>
+         
           <Routes>
             <Route path="/" element={null} /> 
             <Route path='/Services' element={<Services />} />
@@ -30,7 +29,8 @@ export default function App() {
             <Route path='/blog' element={<Blog />} />
             <Route path="*" element={null} />
           </Routes>
-
+          <section id="proj"><Projects /></section>
+          <section id="faq"><FaQuestion /></section>
           <Footer />
         </div>
       </BrowserRouter>
