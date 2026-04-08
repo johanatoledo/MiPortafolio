@@ -30,7 +30,8 @@ export default function Contact() {
 
   return (
     <section className="py-16 px-8 bg-white dark:bg-background text-black dark:text-white transition-colors duration-300" id="contact">
-      <h2 className="text-3xl font-bold text-primary mb-10 text-center">Hablemos de tu proyecto</h2>
+        <h2 className="text-3xl text-center  font-bold text-secundary mb-10">Hablemos  <span className="text-primary font-bold">sobre tu </span> <span className="text-primary italic">proyecto</span></h2>
+        <div className="h-1 w-20 bg-accent mx-auto mb-6"></div>
       {sent ? (
         <div className="text-green-600 dark:text-green-400 font-semibold">¡Gracias! Me pondré en contacto contigo pronto.</div>
       ) 

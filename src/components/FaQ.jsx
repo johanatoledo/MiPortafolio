@@ -15,7 +15,11 @@ const FaQ = () => {
     },
     {
       question: "¿Qué tanto espacio consume en mi conmputadora?",
-      answer: "No ocupa espacio ni consume recursos de su computadora. Todo vive en un servidor seguro de alta velocidad  que yo gestiono. "
+      answer: "No ocupa espacio ni consume recursos de su computadora. Todo vive en un servidor seguro de alta velocidad  que yo gestiono."
+    },
+     {
+      question: "¿",
+      answer: "No ocupa espacio ni consume recursos de su computadora. Todo vive en un servidor seguro de alta velocidad  que yo gestiono."
     },
     {
       question: "¿Ofreces servicio de hosting y dominio?",
@@ -35,7 +39,7 @@ const FaQ = () => {
     <section id="faq" className="py-24 px-6 font-sans">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-         <h2 className="text-3xl font-bold text-primary mb-10">Preguntas <span className="text-primary italic">Frecuentes</span></h2>
+         <h2 className="text-3xl font-bold text-secundary mb-10">Preguntas <span className="text-primary italic">Frecuentes</span></h2>
          
           <div className="h-1.5 w-24 bg-accent mx-auto rounded-full"></div>
         </div>

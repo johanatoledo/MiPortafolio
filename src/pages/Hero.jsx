@@ -6,6 +6,7 @@ import { useLazyLoad } from '../hooks/useLazyLoad';
 import heroImg from '../assets/hero.jpg';
 import ProfileImage from '../components/ProfileImage';
 
+
 const Hero = () => {
   useDocumentTitle('ToledanaDev | Portfolio');
   const imgRef = useRef(null);
@@ -14,6 +15,7 @@ const Hero = () => {
     <section className="h-screen flex flex-col md:flex-row items-center justify-center px-4 bg-white dark:bg-background text-black dark:text-white transition-colors duration-300">
       <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-1/2">
         <ProfileImage src={heroImg} />
+        
       </div>
       <div className="flex flex-col items-center md:items-start w-full md:w-1/2 md:pl-8">
         <h1 className="font-['Sora'] mt-12 font-[600] text-4xl md:text-7xl tracking-tighter leading-[1.1] text-black dark:text-white text-center md:text-left">

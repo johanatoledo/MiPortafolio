@@ -19,23 +19,10 @@ export default function App() {
      
         <div className="min-h-screen font-sans transition-colors duration-300 bg-white dark:diagonal-gradient-pro">
           <Navbar />
-          
-          <section id="home">
-            <Hero />
-          </section>
-
-          <section id="about">
-            <AboutMe />
-          </section>
-
-          <section id="faq">
-            <FaQuestion />
-          </section>
-
-          <section id="contact">
-            <Contact />
-          </section>
-         
+          <section id="home"> <Hero /> </section>
+          <section id="about"><AboutMe /></section>
+          <section id="faq"><FaQuestion /></section>
+          <section id="contact"><Contact /></section>
           <Routes>
             <Route path="/" element={null} /> 
             <Route path='/Services' element={<Services />} />
