@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
-import { Code2, Layout, Server, Database, Smartphone, Globe } from 'lucide-react';
+import { Code2, Layout, Server, Database, Smartphone, Globe, BotMessageSquare } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -13,6 +13,11 @@ const AboutMe = () => {
       title: "Soluciones web integrales",
       content: "Te guiaré a través de todo el ciclo de vida de tu aplicación, teniendo en cuenta el diseño de interfaces dinámicas y responsivas. Mi enfoque no se limita a escribir código, sino a asegurar que cada capa funcione en armonía.",
       icon: <Code2 className="w-10 h-10 text-primary" />,
+    },
+    {
+      title: "Integro IA que entiende tu negocio.",
+      content: "IA que no solo responde, vende y agenda por ti, aprende los gustos de tus clientes para ofrecer experiencias personalizadas y eficientes.",
+      icon: <BotMessageSquare className="w-10 h-10 text-primary" />,
     },
     {
       title: "Desarrollo Frontend y Backend",
