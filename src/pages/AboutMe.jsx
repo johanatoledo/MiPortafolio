@@ -46,15 +46,13 @@ const AboutMe = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-dark overflow-hidden">
-
+    <section className="relative py-24 bg-dark overflow-hidden  dark:bg-background   transition-colors duration-300 overflow-hidden rounded-xl shadow-sm">
       <span className="absolute -top-10 -left-10 text-[15rem] text-primary/5 font-mono select-none pointer-events-none z-0">
         {'{'}
       </span>
       <span className="absolute -bottom-20 -right-10 text-[15rem] text-accent/5 font-mono select-none pointer-events-none z-0">
         {'}'}
       </span>
-
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <Swiper
           modules={[Navigation, Pagination, EffectFade, Autoplay]}
@@ -69,22 +67,19 @@ const AboutMe = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="relative border-l-2 border-primary/30 pl-8 md:pl-12 py-4 bg-dark">
-              {slide.icon}
+              <div className=" relative border-l-2 border-primary/30 pl-8 md:pl-12 py-4 bg-dark dark:bg-background rounded-xl shadow-sm">
+                {slide.icon}
                 <h2 className="text-primary text-sm mt-4 uppercase tracking-[0.3em] font-bold mb-6">
                   {slide.title}
                 </h2>
-                <p className="text-xl md:text-2xl text-gray-400 italic leading-relaxed font-light text-justify">
+                <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-400 italic leading-relaxed font-light text-justify">
                   "{slide.content}"
                 </p>
-                  
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-      
-  
       <style dangerouslySetInnerHTML={{ __html: `
         .swiper-pagination-bullet { background: #333 !important; opacity: 1 !important; }
         .swiper-pagination-bullet-active { background: #00ffff !important; box-shadow: 0 0 10px #00ffff; }
