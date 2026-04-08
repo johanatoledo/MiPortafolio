@@ -25,12 +25,12 @@ const stacks = [
 
 export default function Skills() {
   return (
-    <section className="py-16 px-8 bg-white dark:bg-background text-black dark:text-white transition-colors duration-300" id="skills">
+    <section className="py-12 px-4 md:px-8 bg-white/95 dark:bg-background text-gray-800 dark:text-white transition-colors duration-300 rounded-xl shadow-sm" id="skills">
       <div className="flex flex-col md:flex-row justify-center items-stretch md:space-x-20 space-y-10 md:space-y-0">
-            <div className="flex gap-4 items-center text-3xl">
-              {stacks[0].items}
-            </div>
-          </div>
+        <div className="flex gap-4 items-center text-3xl">
+          {stacks[0].items}
+        </div>
+      </div>
     </section>
   );
 }

@@ -30,29 +30,29 @@ function ProjectCard({ proj }) {
   const imgRef = useRef(null);
   useLazyLoad(imgRef);
   return (
-    <div className="bg-gray-100 dark:bg-[#111] rounded-xl shadow-lg p-6 flex flex-col transition-colors duration-300">
+    <div className="bg-white/90 dark:bg-[#111] rounded-2xl shadow-md hover:shadow-xl p-8 flex flex-col transition-all duration-300 border border-gray-100 dark:border-gray-800">
       <img
         ref={imgRef}
         src={proj.image}
         alt={proj.title}
-        className="w-full h-40 object-cover rounded mb-4"
+        className="w-full h-40 object-cover rounded-xl mb-4 border border-gray-200 dark:border-gray-800"
         loading="lazy"
       />
-      <h3 className="text-xl font-semibold text-cyan-400 mb-2">{proj.title}</h3>
-      <p className="text-accent font-medium mb-1">{proj.client}</p>
-      
+      <h3 className="text-xl font-semibold text-gray-800 dark:text-cyan-400 mb-2">{proj.title}</h3>
+      <p className="text-gray-500 dark:text-accent font-medium mb-1">{proj.client}</p>
     </div>
   );
 }
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16 px-8 bg-white dark:bg-background text-black dark:text-white transition-colors duration-300">
-     <div className="text-center mb-16">
-         <h2 className="text-3xl font-bold text-secundary mb-10"> Expande tu idea de negocio a <span className="text-primary italic"> EEUU y el mundo!</span></h2>
-         
-          <div className="h-1.5 w-24 bg-accent mx-auto rounded-full"></div>
-        </div>
+    <section id="projects" className="py-16 px-4 md:px-8 bg-white/95 dark:bg-background transition-colors duration-300">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-secundary mb-10">
+          Expande tu idea de negocio a <span className="text-primary italic">EEUU y el mundo!</span>
+        </h2>
+        <div className="h-1.5 w-24 bg-accent mx-auto rounded-full"></div>
+      </div>
       <div className="grid md:grid-cols-3 gap-10">
         {projects.map((proj, idx) => (
           <ProjectCard key={idx} proj={proj} />
