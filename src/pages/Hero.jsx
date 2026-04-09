@@ -3,6 +3,7 @@ import robotIA from "../assets/robot-IA-transp.png";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useDarkMode } from "../context/DarkModeContext";
+import { FormattedMessage } from 'react-intl';
 
 const Hero = () => {
   const [init, setInit] = useState(false);
@@ -19,8 +20,7 @@ const Hero = () => {
     background: { color: { value: "transparent" } },
     fpsLimit: 120,
     particles: {
-      // Usamos tus colores Primary (Cian) y Accent (Rojo) definidos en tailwind.config.js
-      color: { value: [ "#00ffff", "#ff003c" ] },
+      color: { value: ["#00ffff", "#ff003c"] },
       links: {
         color: darkMode ? "#ffffff" : "#00ffff",
         distance: 150,
@@ -45,65 +45,70 @@ const Hero = () => {
       const y = e.clientY - (rect.top + rect.height / 2);
       const moveX = Math.max(Math.min(x / 20, 25), -25);
       const moveY = Math.max(Math.min(y / 20, 25), -25);
-      robot.style.transform = `translate(${moveX}px, ${moveY}px) rotateY(${moveX/2}deg) rotateX(${-moveY/2}deg)`;
+      robot.style.transform = `translate(${moveX}px, ${moveY}px) rotateY(${moveX / 2}deg) rotateX(${-moveY / 2}deg)`;
     };
 
     const area = document.getElementById("home");
     if (area) {
       area.addEventListener("mousemove", handleMouseMove);
-      area.addEventListener("mouseleave", () => {
-        if (robotRef.current) robotRef.current.style.transform = "translate(0,0) rotate(0)";
-      });
     }
+    
+    return () => {
+      if (area) area.removeEventListener("mousemove", handleMouseMove);
+    };
   }, []);
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden transition-colors duration-500 font-sans bg-secundary dark:bg-background"
     >
-      {/* PARTÍCULAS */}
       {init && <Particles id="tsparticles" className="absolute inset-0 z-0" options={particlesOptions} />}
 
-      {/* GRADIENTE BASADO EN TU PALETA */}
       <div className={`
         absolute inset-0 z-10 transition-opacity duration-500
-        ${darkMode 
-          ? "bg-[radial-gradient(circle_at_center,transparent_0%,#0a0a0a_85%)]" 
+        ${darkMode
+          ? "bg-[radial-gradient(circle_at_center,transparent_0%,#0a0a0a_85%)]"
           : "bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.08)_0%,rgba(255,255,255,1)_85%)]"
         }
       `}></div>
 
       <div className="relative z-20 flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-6xl mx-auto px-6 gap-8">
-        
+
         {/* LADO IZQUIERDO: TEXTO */}
         <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start">
-         {/* Badge Superior */}
+          
           <span className="inline-block px-4 py-1 border border-primary/30 rounded-full text-primary text-[8px] sm:text-xs font-mono mb-6 tracking-[0.2em] uppercase bg-primary/5">
-           Desarrollo Web & IA
-         </span>
+            <FormattedMessage id="hero.badge" defaultMessage="Desarrollo Web & IA" />
+          </span>
 
-        {/* Título: Grosor reducido de font-bold a font-semibold para mayor elegancia */}
-       <h1 className="text-2xl sm:text-2xl lg:text-5xl  leading-[1.1] mb-6 text-background dark:text-secundary">
-     Transformo tus ideas en <span className="text-primary italic">Soluciones</span> de <span className="text-accent italic">alto impacto</span>.
-    </h1>
+          <h1 className="text-2xl sm:text-2xl lg:text-5xl leading-[1.1] mb-6 text-background dark:text-secundary">
+            <FormattedMessage
+              id="hero.title"
+              values={{
+                span1: (chunks) => <span className="text-primary italic">{chunks}</span>,
+                span2: (chunks) => <span className="text-accent italic">{chunks}</span>
+              }}
+              defaultMessage="Transformo tus ideas en <span1>Soluciones</span1> de <span2>alto impacto</span2>."
+            />
+          </h1>
 
-       {/* Descripción */}
-     <p className="text-base sm:text-lg mb-10 max-w-md lg:max-w-lg leading-relaxed text-background/70 dark:text-secundary/60">
-        Especialista en plataformas de alta conversión e integración de 
-     <strong className=" font-semibold ml-1 uppercase tracking-tighter">
-         Agentes de IA
-     </strong>.
-</p>
+          <p className="text-base sm:text-lg mb-10 max-w-md lg:max-w-lg leading-relaxed text-background/70 dark:text-secundary/60">
+            <FormattedMessage
+              id="hero.description"
+              values={{
+                bold: (chunks) => <strong className="font-semibold ml-1 uppercase tracking-tighter">{chunks}</strong>
+              }}
+              defaultMessage="Especialista en plataformas de alta conversión e integración de <bold>Agentes de IA</bold>."
+            />
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-            {/* Botón Principal usando Primary y Background */}
-            <a href="#contact" className="px-8 py-4 bg-primary text-background font-bold rounded-full transition-all hover:scale-105 shadow-lg shadow-primary/20 active:scale-95">
-              Cotizar proyecto
+            <a href="#contact" className="px-8 py-4 bg-primary text-background font-bold rounded-full transition-all hover:scale-105 shadow-lg shadow-primary/20 active:scale-95 text-center">
+              <FormattedMessage id="hero.quote" defaultMessage="Cotizar Proyecto" />
             </a>
-            {/* Botón Secundario usando Accent en hover */}
-            <a href="#services" className="px-8 py-4 bg-transparent border border-background/20 dark:border-secundary/20 text-background dark:text-secundary rounded-full transition-all hover:border-accent hover:text-accent">
-              Ver Servicios
+            <a href="#services" className="px-8 py-4 bg-transparent border border-background/20 dark:border-secundary/20 text-background dark:text-secundary rounded-full transition-all hover:border-accent hover:text-accent text-center">
+              <FormattedMessage id="hero.seeServices" defaultMessage="Ver Servicios" />
             </a>
           </div>
         </div>
@@ -118,7 +123,6 @@ const Hero = () => {
               className="animate-float w-full h-auto max-h-[350px] md:max-h-[550px] object-contain drop-shadow-[0_20px_50px_rgba(0,255,255,0.3)] pointer-events-none"
               style={{ willChange: 'transform' }}
             />
-            {/* Glow de fondo dinámico */}
             <div className="absolute inset-0 bg-primary/10 blur-[120px] rounded-full -z-10 opacity-50 dark:opacity-100"></div>
           </div>
         </div>
