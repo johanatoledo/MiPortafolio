@@ -57,12 +57,17 @@ const Services = () => {
       <div className="max-w-7xl mx-auto">
         
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-secundary mb-6">
-            Soluciones <span className="text-primary italic">Digitales</span>
-          </h2>
-          <div className="h-1.5 w-24 bg-accent mx-auto rounded-full"></div>
-        </div>
 
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-secundary mb-6">
+             Nuestros <span className="text-primary italic">Servicios</span>
+          </h2>
+        <div className="h-1.5 w-24 bg-accent mx-auto rounded-full"></div>
+
+
+      <h4 className="mt-10 text-2xl md:text-2xl font-medium text-black dark:text-secundary leading-relaxed max-w-3xl mx-auto"> 
+         Automatiza tu negocio y multiplica tus ventas con Agentes de IA.
+      </h4>
+     </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesList.map((service, index) => (
             <div
@@ -74,10 +79,9 @@ const Services = () => {
                 dark:diagonal-gradient-pro dark:border-gray-800 dark:hover:border-primary
               `}
             >
-              {/* Overlay sutil al hacer hover */}
               <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
 
-              {/* CONTENEDOR DEL ICONO */}
+              
               <div className="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-xl 
                 bg-slate-50 dark:bg-slate-900/50 
                 text-primary border border-slate-100 dark:border-slate-800
@@ -86,17 +90,17 @@ const Services = () => {
                 {service.icon}
               </div>
 
-              {/* Título */}
+              
               <h3 className="text-xl font-bold mb-4 text-slate-800 dark:text-white group-hover:text-primary transition-colors duration-300 relative z-10">
                 {service.title}
               </h3>
 
-              {/* Descripción */}
+              
               <p className="text-slate-600 dark:text-gray-400 text-sm leading-relaxed mb-6 relative z-10">
                 {service.description}
               </p>
 
-              {/* Enlace CTA */}
+            
               <div className="flex items-center text-xs font-bold text-accent uppercase tracking-widest relative z-10">
                 Consultar ahora 
                 <span className="ml-2 group-hover:translate-x-2 transition-transform duration-300">→</span>
