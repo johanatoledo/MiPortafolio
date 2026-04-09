@@ -22,7 +22,7 @@ const navLinks = [
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 flex items-center px-6 py-4 bg-white/95 dark:bg-background/90 text-primary dark:text-primary transition-colors duration-300 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 shadow-sm">
+    <nav className="fixed top-0 w-full z-50 flex items-center px-4 sm:px-6 py-3 sm:py-4 bg-transparent text-primary dark:text-primary transition-colors duration-300 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 shadow-sm">
       <div className="font-bold text-2xl font-mono select-none" style={{ fontFamily: 'JetBrains Mono, Fira Code, Space Mono, monospace' }}>
         <span className="text-accent">&#60;</span>
         <span className="text-primary">Toledana</span>
@@ -30,7 +30,7 @@ const navLinks = [
         <span className="text-accent">&#47;&#62;</span>
       </div>
       <div className="flex-1"></div>
-      <ul className="flex gap-6 text-lg items-center">
+      <ul className="flex gap-4 sm:gap-6 text-sm sm:text-base items-center">
         {navLinks.map((link) => (
           <li key={link.name}>
             <a
