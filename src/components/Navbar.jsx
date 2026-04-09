@@ -1,25 +1,18 @@
 import React from 'react';
 import { useDarkMode } from '../context/DarkModeContext';
 import { useSmoothScroll } from '../hooks/useSmoothScroll';
+import { FormattedMessage } from 'react-intl';
+import { NavHashLink } from 'react-router-hash-link'; 
 
-export default function Navbar() {
+export default function Navbar({ setLocale, locale }) {
   const { darkMode, setDarkMode } = useDarkMode();
-  useSmoothScroll(); 
-const navLinks = [
-    { name: 'Inicio', href: '#home' },
-    { name: 'Servicios', href: '#services' }, 
-    { name: 'Contacto', href: '#contact' },  
-  ];
+  useSmoothScroll();
 
-  const handleNavClick = (e, href) => {
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      const section = document.querySelector(href);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
+  const navLinks = [
+    { name: 'navbar.home', href: '/#home' },      
+    { name: 'navbar.services', href: '/#services' },
+    { name: 'navbar.contact', href: '/#contact' },
+  ];
 
   return (
     <nav className="fixed top-0 w-full z-50 flex items-center px-4 sm:px-6 py-3 sm:py-4 bg-transparent text-primary dark:text-primary transition-colors duration-300 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 shadow-sm">
@@ -33,15 +26,27 @@ const navLinks = [
       <ul className="flex gap-4 sm:gap-6 text-sm sm:text-base items-center">
         {navLinks.map((link) => (
           <li key={link.name}>
-            <a
-              href={link.href}
+            <NavHashLink
+              smooth 
+              to={link.href}
               className="hover:text-accent transition-colors duration-200 text-gray-700 dark:text-primary"
-              onClick={e => handleNavClick(e, link.href)}
             >
-              {link.name}
-            </a>
+              <FormattedMessage id={link.name} />
+            </NavHashLink>
           </li>
         ))}
+        {/* Language selector */}
+        <li>
+          <select
+            value={locale}
+            onChange={e => setLocale(e.target.value)}
+            className="ml-2 px-2 py-1 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#222] text-xs"
+            aria-label="Select language"
+          >
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
+        </li>
       </ul>
       <button
         aria-label="Toggle dark mode"
