@@ -49,7 +49,7 @@ export default function Projects() {
     <section id="projects" className="py-16 px-4 md:px-8 bg-white/95 dark:bg-background transition-colors duration-300">
       <div className="text-center mb-16">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-secundary mb-10">
-          Expande tu idea de negocio a <span className="text-primary italic">EEUU y el mundo!</span>
+           Inspirados en estandares del mercado <span className="text-primary italic">Estadounidense</span>
         </h2>
         <div className="h-1.5 w-24 bg-accent mx-auto rounded-full"></div>
       </div>
