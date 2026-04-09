@@ -29,19 +29,18 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-16 px-8 bg-white dark:bg-background text-black dark:text-white transition-colors duration-300" id="contact">
-        <h2 className="text-3xl text-center  font-bold text-secundary mb-10">Hablemos  <span className="text-primary font-bold">sobre tu </span> <span className="text-primary italic">proyecto</span></h2>
-        <div className="h-1 w-20 bg-accent mx-auto mb-6"></div>
+    <section className="py-16 px-4 md:px-8 bg-white/95 dark:bg-background transition-colors duration-300 rounded-xl shadow-sm" id="contact">
+      <h2 className="text-3xl text-center font-bold text-gray-800 dark:text-secundary mb-10">Hablemos <span className="text-primary font-bold">sobre tu </span> <span className="text-primary italic">proyecto</span></h2>
+      <div className="h-1 w-20 bg-accent mx-auto mb-6"></div>
       {sent ? (
         <div className="text-green-600 dark:text-green-400 font-semibold">¡Gracias! Me pondré en contacto contigo pronto.</div>
-      ) 
-      : (
-        <form className="max-w-xl mx-auto flex flex-col gap-6 bg-gray-100 dark:bg-[#111] rounded-xl shadow-lg p-8 transition-colors duration-300" onSubmit={handleSubmit}>
+      ) : (
+        <form className="max-w-xl mx-auto flex flex-col gap-6 bg-white/90 dark:bg-[#111] rounded-2xl shadow-md p-8 transition-colors duration-300 border border-gray-100 dark:border-gray-800" onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
             placeholder="Tu Nombre"
-            className="p-3 rounded bg-gray-100 dark:bg-[#111] text-black dark:text-white border border-primary focus:outline-none focus:bg-cyan-100 focus:dark:bg-[#222] hover:bg-cyan-100 hover:dark:bg-[#222] transition-colors"
+            className="p-3 rounded bg-gray-100 dark:bg-[#111] text-gray-800 dark:text-white border border-primary focus:outline-none focus:bg-cyan-100 focus:dark:bg-[#222] hover:bg-cyan-100 hover:dark:bg-[#222] transition-colors"
             value={form.name}
             onChange={handleChange}
             required
@@ -50,7 +49,7 @@ export default function Contact() {
             type="email"
             name="email"
             placeholder="Tu Correo Electrónico"
-            className="p-3 rounded bg-gray-100 dark:bg-[#111] text-black dark:text-white border border-primary focus:outline-none focus:bg-cyan-100 focus:dark:bg-[#222] hover:bg-cyan-100 hover:dark:bg-[#222] transition-colors"
+            className="p-3 rounded bg-gray-100 dark:bg-[#111] text-gray-800 dark:text-white border border-primary focus:outline-none focus:bg-cyan-100 focus:dark:bg-[#222] hover:bg-cyan-100 hover:dark:bg-[#222] transition-colors"
             value={form.email}
             onChange={handleChange}
             required
