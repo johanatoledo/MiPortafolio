@@ -2,40 +2,41 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Navbar from './components/Navbar';
 import Hero from './pages/Hero';
-import AboutMe from './pages/AboutMe';
+import Description  from './pages/Description';
 import Projects from './components/Projects';
 import Faq from './components/Faq';
 import Services from './components/Services';
-import Skills from './components/Skills';
-import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import { DarkModeProvider } from './context/DarkModeContext';
 
-export default function App() {
+// Componente para agrupar la Landing Page
+const LandingPage = () => (
+  <>
+    <section id="home"> <Hero /> </section>
+    <section id="description"><Description /></section>
+    <section id="services"><Services /></section>
+    <section id="proj"><Projects /></section>
+    <section id="faq"><Faq /></section>
+    <section id="contact"><Contact /></section>
+  </>
+);
+
+export default function App({ setLocale, locale }) {
   return (
     <DarkModeProvider>
       <BrowserRouter>
         <div className="min-h-screen font-sans transition-colors duration-300 bg-white dark:diagonal-gradient-pro">
-          <Navbar />
-          <section id="home"> <Hero /> </section>
-          <section id="about"><AboutMe /></section>
+          <Navbar setLocale={setLocale} locale={locale} />
           
-        
-          <section id="services"><Services /></section>
-
-          <section id="proj"><Projects /></section>
-          <section id="faq"><Faq /></section>
-          <section id="contact"><Contact /></section>
-
           <Routes>
-            <Route path="/" element={null} /> 
-            <Route path='/blog' element={<Blog />} />
+        
+            <Route path="/" element={<LandingPage />} />
           </Routes>
-          
+
           <Footer />
         </div>
       </BrowserRouter>
     </DarkModeProvider>
-  )
+  );
 }
