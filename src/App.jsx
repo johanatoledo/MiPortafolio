@@ -9,6 +9,7 @@ import Services from './components/Services';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import { DarkModeProvider } from './context/DarkModeContext';
+import About from './pages/About';
 
 // Componente para agrupar la Landing Page
 const LandingPage = () => (
@@ -30,8 +31,8 @@ export default function App({ setLocale, locale }) {
           <Navbar setLocale={setLocale} locale={locale} />
           
           <Routes>
-        
             <Route path="/" element={<LandingPage />} />
+            <Route path="/about" element={<About />} />
           </Routes>
 
           <Footer />
