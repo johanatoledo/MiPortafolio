@@ -9,7 +9,8 @@ export default function Navbar({ setLocale, locale }) {
   useSmoothScroll();
 
   const navLinks = [
-    { name: 'navbar.home', href: '/#home' },      
+    { name: 'navbar.home', href: '/#home' },
+    { name: 'navbar.about', href: '/about' },
     { name: 'navbar.services', href: '/#services' },
     { name: 'navbar.contact', href: '/#contact' },
   ];
