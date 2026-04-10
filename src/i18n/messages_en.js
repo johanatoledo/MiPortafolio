@@ -41,6 +41,37 @@ const messages = {
       content: "Deployment and management of applications using top platforms to ensure identical production environments."
     }
   },
+  services: {
+    mainTitle: "Our <italic>Services</italic>",
+    subTitle: "Automate your business and multiply your sales with AI Agents.",
+    consultCta: "Inquire now",
+    items: {
+      portfolio: {
+        title: "Professional Portfolios",
+        description: "Exclusive design for professionals looking to stand out. We create a high-impact digital showcase that projects confidence."
+      },
+      restaurants: {
+        title: "Restaurant Systems",
+        description: "Digitize your menu and manage orders without paying third-party commissions. Table control, stock, and sales from a private panel."
+      },
+      beauty: {
+        title: "Beauty Salons & Barbershops",
+        description: "We implement smart schedules where your clients book their appointments online, optimizing your stylists' time."
+      },
+      ecommerce: {
+        title: "Online Stores (E-commerce)",
+        description: "Take your store to the digital world. Product catalog with shopping cart and direct connection to payment gateways."
+      },
+      cleaning: {
+        title: "Cleaning Services",
+        description: "Platforms with automatic quoting tools. Allow your clients to calculate budgets and schedule technical visits instantly."
+      },
+      catalogs: {
+        title: "Digital Catalogs",
+        description: "Replace heavy PDFs with a visual and fluid Web App. Ideal for product samples with ultra-fast loading on mobile."
+      }
+    }
+  },
   contact: {
     title: "Let's talk about your project",
     name: "Your Name",

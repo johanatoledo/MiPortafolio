@@ -41,6 +41,37 @@ const messages = {
       content: "Despliegue y gestión de aplicaciones con las mejores plataformas para asegurar entornos de producción idénticos."
     }
   },
+  services: {
+    mainTitle: "Nuestros <italic>Servicios</italic>",
+    subTitle: "Automatiza tu negocio y multiplica tus ventas con Agentes de IA.",
+    consultCta: "Consultar ahora",
+    items: {
+      portfolio: {
+        title: "Portafolios Profesionales",
+        description: "Diseño exclusivo para profesionales que buscan destacar. Creamos una vitrina digital de alto impacto que proyecta confianza."
+      },
+      restaurants: {
+        title: "Sistemas para Restaurantes",
+        description: "Digitaliza tu menú y gestiona pedidos sin pagar comisiones a terceros. Control de mesas, stock y ventas desde un panel privado."
+      },
+      beauty: {
+        title: "Salones de Belleza y Barberías",
+        description: "Implementamos agendas inteligentes donde tus clientes reservan su turno online, optimizando el tiempo de tus estilistas."
+      },
+      ecommerce: {
+        title: "Tiendas Online (E-commerce)",
+        description: "Lleva tu tienda al mundo digital. Catálogo de productos con carrito de compras y conexión directa a pasarelas de pago."
+      },
+      cleaning: {
+        title: "Servicios de Limpieza",
+        description: "Plataformas con cotizadores automáticos. Permite que tus clientes calculen presupuestos y agenden visitas técnicas al instante."
+      },
+      catalogs: {
+        title: "Catálogos Digitales",
+        description: "Sustituye los PDF pesados por una Web App visual y fluida. Ideal para muestras de productos con carga ultra rápida."
+      }
+    }
+  },
   
   contact: {
     title: "Hablemos sobre tu proyecto",
